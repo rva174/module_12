@@ -1,1 +1,3 @@
-    VBBBBFG  D
+      VBBBBFG  D  LLKKKK---
+      .,.,.
+      KJO;J

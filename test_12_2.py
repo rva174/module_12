@@ -1,5 +1,6 @@
-import unittest
+# ДЗ по теме "Методы Юнит-тестирования"
 
+import unittest
 
 class Runner:
     def __init__(self, name, speed=5):
@@ -31,14 +32,14 @@ class Tournament:
     def start(self):
         finishers = {}
         place = 1
-        while self.participants:  # по списку участников (объектов класса Runner)
-            for participant in self.participants:  # для каждого участника в списке:
-                participant.run()                  # вызываем функцию бежать
-                if participant.distance >= self.full_distance:  #
-                    finishers[place] = participant  # в словарь finishers помещают результат забега (место:участник)
-                    place += 1                      # определяем финишера на следующее место,
-                    self.participants.remove(participant) # убираем финишировавшего из списка участников
-        return finishers # возвращает словарь с результатами забега
+        while self.participants:
+            for participant in self.participants:
+                participant.run()
+                if participant.distance >= self.full_distance:
+                    finishers[place] = participant
+                    place += 1
+                    self.participants.remove(participant)
+        return finishers
 
 
 class TournamentTest(unittest.TestCase):
